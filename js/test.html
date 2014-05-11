@@ -1,0 +1,63 @@
+<html>
+<head>
+<script type="text/javascript" src="raphael-min.js"></script>
+<style type="text/css">
+.cloud{
+	background-image: url(../images/cloud.png);
+	width: 95px;
+	height: 58px;
+}
+</style>
+<script type="text/javascript">
+	
+	window.onload = function(){
+
+	var width=400;
+
+	var paper = Raphael(0,0,width,800);
+	var rect = paper.rect(0, 0, 400, 800);
+	rect.attr("fill", "blue");
+
+ //	   ellipse (x[i],(i*15)+15, 30, 30);
+ //    ellipse (x[i]+32,(i*15), 70, 70);
+ //    ellipse (x[i]+67,(i*15)-14, 30, 30);
+ //    ellipse (x[i]+62,(i*15)+22, 35, 35);
+ //    ellipse (x[i]+82,(i*15)+10, 45, 45);
+
+	var img = paper.image("../images/cloud.png", -150, 100, 95, 58);
+	var img2 = paper.image("../images/cloud.png", -300, 300, 95, 58);
+
+	function a() {
+    img.animate({x : 500}, 2000, b);
+    img2.animate({x : 500}, 2000, b);
+	}
+
+	function b() {
+	img.animate({x : -150}, 2000, a);
+	img2.animate({x : -150}, 2000, a);
+	}
+
+	// function c() {
+	// img.animate({x : -120}, 2000, a);
+	// }
+	a();
+
+	// img.animate({
+	// 	x : 400
+	// }, 2000);
+			
+
+
+	// var img = paper.image("../images/cloud.png", -300, 300, 95, 58);
+
+	// 		img.animate({
+	// 				x : 400
+	// 			}, 3500);
+
+};
+</script>
+</head>
+<body>
+<!-- <div id="cloud"></div>
+ --></body>
+</html>

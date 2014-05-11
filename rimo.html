@@ -1,0 +1,196 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>(m)EatLess</title>
+
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+<script src="jquery/jquery-1.10.2.js"></script>
+<script src="jquery/jquery.mobile-1.4.2.js"></script>
+
+<script src="js/rimo.js"></script>
+<script src="js/raphael-min.js" type="text/javascript" charset="utf-8"></script>
+
+
+</head> 
+<body>
+
+<!-- TODAY -->
+
+<div data-role="page" id="today" >
+<div data-role="panel" id="nav1">
+
+	<ul>
+ 		<li><span class="title">(m)EatLess</span></li>
+	    <li><a href="footprint.html" data-ajax="false" class="listIcon">Green Missions</a></li>
+	    <li><a href="rimo.html" data-ajax="false"  class="ui-btn-active rimoIcon">Rimo</a></li>
+	    <li><a href="guide.html" data-ajax="false" class="guideIcon">Guide</a></li>
+	    <li><a href="settings.html" data-ajax="false" class="settingsIcon">Settings</a></li>
+	    <li><a href="help.html" data-ajax="false" class="helpIcon">Help</a></li>
+    </ul> 
+
+</div><!-- /panel -->
+
+	<div data-role="header" data-theme="f" >
+	<a href="#nav1" class="ui-btn"></a>
+
+		<h1>Rimo's Status</h1>
+	</div>
+
+	<div data-role="content">
+	
+			<!-- Status Navbar -->
+			<div data-role="navbar" data-grid="b" class="custom-navbar">
+		    <ul>
+		        <li><a href="#today" class="ui-btn-active">Today</a></li>
+		        <li><a href="#week">Week</a></li>
+		        <li style="border-right:none"><a href="#month">Month</a></li>
+		    </ul>
+			</div>       
+
+	 		<div class="statusInfo" >
+	 			<center><h4>Today's Average</h4></center>
+	 			<div class="rectangles"></div>
+
+	 		</div>
+	 		<!-- Status Navbar -->
+	 		<div class="bubble">
+	 			<p id="infoText"></p>
+	 		</div>
+<!-- 			<div class="bubble" style="margin: 0px auto">Fertilisers used in growing feed crops for cattle produce the most potent of all greenhouse gases causing climate change.</div>  --> 
+			<div class="RimoToday">		
+				<img class="Rimo2" src="images/rimo2.png" />
+				<div class="base"></div>
+			</div>
+
+
+    </div>
+</div>
+
+<!-- WEEK -->
+
+<div data-role="page" id="week">
+<div data-role="panel" id="nav2">
+
+	<ul>
+ 		<li><span class="title">(m)EatLess</span></li>
+	    <li><a href="footprint.html" data-ajax="false" class="listIcon">Green Missions</a></li>
+	    <li><a href="rimo.html" data-ajax="false" class="ui-btn-active rimoIcon">Rimo</a></li>
+	    <li><a href="guide.html" data-ajax="false" class="guideIcon">Guide</a></li>
+	    <li><a href="settings.html" data-ajax="false" class="settingsIcon">Settings</a></li>
+	    <li><a href="help.html" data-ajax="false" class="helpIcon">Help</a></li>
+    </ul> 
+
+</div>  <!-- /panel -->
+	<div data-role="header" data-theme="f" >
+	<a href="#nav2" class="ui-btn"></a>
+		<h1>Rimo's Status</h1>
+	</div>
+
+	<div data-role="content">
+	
+			<!-- Status Navbar -->
+			<div data-role="navbar" data-grid="b" class="custom-navbar">
+		    <ul>
+		        <li><a href="#today" >Today</a></li>
+		        <li><a href="#week" class="ui-btn-active">Week</a></li>
+		        <li style="border-right:none"><a href="#month">Month</a></li>
+		    </ul>
+			</div>       
+	 		
+	 		<div class="statusInfo">
+	 			<center><h4>Week's Average</h4></center>
+				<div class="rectangles"></div>
+
+	 		<div class="statusPercent">
+	 				<p>This Week:</p>
+	 				<h1 style="margin:-5px 0 0 30px;">7%</h1>
+	 			</div>
+		 	</div>
+	 		<!-- Status Navbar -->
+			<div class="bubble">You did so much better last week. Lets try to pick it back up!</div>  
+			
+			<div class="base"></div>
+
+			<div class="RimoWeek">		
+			<ul>
+			<li><img src="images/rimo1.png" class="Rimo1"/><span class="Rimo1Day"></span></li>
+			<li><img src="images/rimo3.png" class="Rimo3"/><span class="Rimo3Day"></span></li>
+			<li><img src="images/rimo2.png" class="Rimo2"/><span class="Rimo2Day"></span></li>
+			<li><img src="images/rimo4.png" class="Rimo4"/><span class="Rimo4Day"></span></li>
+			<li><img src="images/rimo6.png" class="Rimo6"/><span class="Rimo6Day"></span></li>
+			<li><img src="images/rimo5.png" class="Rimo5"/><span class="Rimo5Day"></span></li>
+			<li><img src="images/rimo4.png" class="Rimo4"/><span class="Rimo3Day"></span></li>
+			</ul>
+			</div>
+
+    </div>
+</div>
+	
+<!-- MONTH -->
+
+<div data-role="page" id="month">
+<div data-role="panel" id="nav3">
+
+	<ul>
+ 		<li><span class="title">(m)EatLess</span></li>
+	    <li><a href="footprint.html" data-ajax="false" class="listIcon">Green Missions</a></li>
+	    <li><a href="rimo.html" data-ajax="false" class="ui-btn-active rimoIcon">Rimo</a></li>
+	    <li><a href="guide.html" data-ajax="false" class="guideIcon">Guide</a></li>
+	    <li><a href="settings.html" data-ajax="false" class="settingsIcon">Settings</a></li>
+	    <li><a href="help.html" data-ajax="false" class="helpIcon">Help</a></li>
+    </ul> 
+
+</div>  <!-- /panel -->
+	<div data-role="header" data-theme="f" >
+	<a href="#nav3" class="ui-btn"></a>
+		<h1>Rimo's Status</h1>
+	</div>
+
+	<div data-role="content">
+	
+			<!-- Status Navbar -->
+			<div data-role="navbar" data-grid="b" class="custom-navbar">
+		    <ul>
+		        <li><a href="#today" >Today</a></li>
+		        <li><a href="#week">Week</a></li>
+		        <li style="border-right:none"><a href="#month" class="ui-btn-active">Month</a></li>
+		    </ul>
+			</div>       
+	 			<center style="margin-top:30px"><h4>Months' Average</h4></center>
+			<div class="rectangles" ></div>
+
+			<section id="RimoMonth">
+			   <ul>
+					<!-- <li><span class="month">JAN</span><img src="images/rimo6.png" class="Rimo6"/><span class="statusTitle">Meat Offender</span></li> -->
+					<li><span class="month">JAN</span><img src="images/rimo5.png" class="Rimo5"/></li>
+					<li><span class="month">FEB</span><img src="images/rimo3.png" class="Rimo3"/></li>
+					<li><span class="month">MAR</span><img src="images/rimo2.png" class="Rimo2"/></li>
+					<li><span class="month">APR</span><img src="images/rimo1.png" class="Rimo1"/></li>
+					<li><span class="month">MAY</span><img src="images/rimo2.png" class="Rimo2"/></li>
+					<li><span class="month">JUN</span><img src="images/rimo3.png" class="Rimo3"/></li>
+
+					<li><span class="month">JUL</span><img src="" class=""/></li>
+					<li><span class="month">AUG</span><img src="" class=""/></li>
+					<li><span class="month">SEP</span><img src="" class=""/></li>
+					<li><span class="month">OCT</span><img src="" class=""/></li>
+					<li><span class="month">NOV</span><img src="" class=""/></li>
+					<li><span class="month">DEC</span><img src="" class=""/></li>
+
+			   </ul>
+			</section>
+
+
+    </div>
+</div>
+
+</body>
+</html>
+
+

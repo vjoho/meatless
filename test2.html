@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>animate demo</title>
+  <style>
+ /* .wrapper{
+    width: 400px;
+  }*/
+#block {
+    background-color: #bca;
+    width: 150px;
+    border: 1px solid green;
+    left: 0;
+    position: relative;
+  }
+  </style>
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<button id="go">&raquo; Run</button>
+<div id="block">Hello!</div>
+<script>
+// Using multiple unit types within one animation.
+ 
+
+function() {
+  $( "#block" ).animate({
+    left: "100%",
+    // opacity: 0.4,
+    // marginLeft: "0.6in",
+    // fontSize: "3em",
+    // borderWidth: "10px"
+  }, 1500 );
+</script>
+ 
+</body>
+</html>

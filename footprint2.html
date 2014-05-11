@@ -1,0 +1,153 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>(m)EatLess</title>
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.2.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    <script src="jquery/jquery-1.10.2.js"></script>
+    <script src="jquery/jquery.mobile-1.4.2.js"></script>
+
+    <script src="js/footprints.js"></script>
+<script type="text/javascript">
+    $( ".doneButton" ).click(function() {
+        console.log("clicked!!!");
+});
+
+</script>
+</head> 
+<body>
+
+    <div data-role="page" id="home">
+        <div data-role="panel" id="nav1">
+
+           <ul>
+             <li><span class="title">(m)EatLess</span></li>
+             <li><a href="footprint.html" data-rel="external" class="ui-btn-active footprintIcon">Footprint</a></li>
+             <li><a href="rimo.html" data-ajax="false" class="rimoIcon">Rimo</a></li>
+             <li><a href="guide.html" data-ajax="false" class="guideIcon">Guide</a></li>
+             <li><a href="settings.html" data-ajax="false" class="settingsIcon">Settings</a></li>
+             <li><a href="help.html" data-ajax="false" class="helpIcon">Help</a></li>
+         </ul> 
+
+     </div><!-- /panel -->
+     <div data-role="header" data-theme="f" >
+       <a href="#nav1" class="ui-btn"></a>
+
+<!--        <h1>Complete Your Footprints</h1> -->   
+
+<h1> Today's Footprints</h1>
+
+</div>
+
+   <div data-role="content">
+
+   <center><p>Did you Complete a footprint Today?</p></center>
+       <h2>Meats</h2>
+       <div class="col1">
+       <form action="">
+        <select name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+        </select>
+      </form>
+            <p id="meats" data-ajax="false"></p>
+            <p><a href="#learnMore1">learn more >></a></p>
+       </div>
+
+        <div class="col2">
+           <a onclick="Meats();"><img src="images/reload.png" /></a>
+       </div>
+       <br class="clear">
+
+           <a href="#DoneMeats" class="ui-btn ui-shadow" data-rel="popup" data-position-to="window" data-overlay-theme>Completed</a>
+                
+           <div data-role="popup" id="DoneMeats" class="ui-content" data-theme="a">
+           <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                <p id="meatsDoneInfo"></p>
+           </div>
+
+    <h2>Dairy</h2>
+    <div class="col1">
+        <p id="dairy" data-ajax="false"></p>
+        <p><a href="#learnMore2">learn more >></a></p>
+   </div>
+
+    <div class="col2">
+      <a onclick="Dairy();"><img src="images/reload.png" /></a>
+    </div>
+           <br class="clear">
+
+        <a href="#DoneDairy" class="ui-btn ui-shadow" data-rel="popup" data-position-to="window">Done</a>
+        <div data-role="popup" id="DoneDairy" class="ui-content" data-theme="a">
+         <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+        <p id="dairyDoneInfo"></p>
+        </div>
+
+    <h2>Produce</h2>
+    <div class="col1">
+    <p id="produce" data-ajax="false"></p>
+         <p><a href="#learnMore3">learn more >></a></p>           
+    </div>
+
+    <div class="col2">
+            <a onclick="Produce();"><img src="images/reload.png" /></a>
+    </div>
+           <br class="clear">
+
+        <a href="#DoneProduce" class="ui-btn ui-shadow" data-rel="popup" data-position-to="window">Done</a>
+        <div data-role="popup" id="DoneProduce" class="ui-content" data-theme="a">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                <p id="produceDoneInfo"></p>
+        </div>
+
+    </div>
+</div>
+<!-- learn more pop ups -->
+<div data-role="dialog" id="learnMore1">
+	<div data-role="header">
+		<h1>Info Box</h1>
+	</div>
+    <div data-role="content">
+        <p id="meatsInfo"></p>
+        <center><a href="#" data-role="button" data-rel="back" class="ui-btn ui-btn-inline" >close</a></center>
+    </div>
+
+</div>
+
+<div data-role="dialog" id="learnMore2">
+    <div data-role="header">
+        <h1>Info Box</h1>
+    </div>
+    <div data-role="content">
+        <p id="dairyInfo"></p>
+        <center><a href="#" data-role="button" data-rel="back" class="ui-btn ui-btn-inline" >close</a></center>
+    </div>
+
+</div>
+
+<div data-role="dialog" id="learnMore3">
+    <div data-role="header">
+        <h1>Info Box</h1>
+    </div>
+    <div data-role="content">
+        <p id="produceInfo"></p>
+        <center><a href="#" data-role="button" data-rel="back" class="ui-btn ui-btn-inline" >close</a></center>
+    </div>
+
+</div>
+
+<!-- Done button pop ups -->
+
+</body>
+</html>
+
+

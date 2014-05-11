@@ -1,0 +1,186 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>(m)EatLess</title>
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.2.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    <script src="jquery/jquery-1.10.2.js"></script>
+    <script src="jquery/jquery.mobile-1.4.2.js"></script>
+
+    <script src="js/footprints.js"></script>
+<script type="text/javascript">
+    $( ".doneButton" ).click(function() {
+        console.log("clicked!!!");
+});
+
+</script>
+
+<style type="text/css">
+  .fadedBg{
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+  }
+</style>
+</head> 
+<body>
+
+    <div data-role="page" id="home">
+        <div data-role="panel" id="nav1">
+
+           <ul>
+             <li><span class="title">(m)EatLess</span></li>
+             <li><a href="footprint.html" data-rel="external" class="ui-btn-active listIcon">Green Missions</a></li>
+             <li><a href="rimo.html" data-ajax="false" class="rimoIcon">Rimo</a></li>
+             <li><a href="guide.html" data-ajax="false" class="guideIcon">Guide</a></li>
+             <li><a href="friends.html" data-ajax="false" class="friendsIcon">Friends</a></li>
+             <li><a href="leaderboard.html" data-ajax="false" class="rankingIcon">Leaderboard</a></li>
+             <li><a href="settings.html" data-ajax="false" class="settingsIcon">Settings</a></li>
+<!--              <li><a href="help.html" data-ajax="false" class="helpIcon">Help</a></li>
+ -->         </ul> 
+
+     </div><!-- /panel -->
+     <div data-role="header" data-theme="f" >
+       <a href="#nav1" class="ui-btn"></a>
+
+    <h1> Today's Missions</h1>
+
+    </div>  <!-- /header -->
+
+   <div data-role="content">
+
+   <center><p>Complete a Green Mission Today</p></center>
+       <h2>Meats</h2>
+       <div class="col1">
+            <p id="meats" data-ajax="false"></p>
+
+            <!-- learn more -->
+            <p><a href="#learnMore1" data-rel="popup" data-position-to="window" data-overlay-theme>learn more >></a></p>
+
+            <div data-role="popup" id="learnMore1" data-overlay-theme="b" class="ui-content" data-theme="a">
+           <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+                <p id="meatsInfo"></p>
+           </div><!-- /popup -->
+
+       </div><!-- /col1 -->
+
+        <div class="col2">
+           <a onclick="Meats();"><img src="images/reload.png" /></a>
+       </div><!-- /col2 -->
+       <br class="clear">
+
+            <!-- completed-->
+
+           <a href="#DoneMeats" class="ui-btn ui-shadow" data-rel="popup" data-position-to="window" data-overlay-theme>Completed</a>
+                  
+           <div data-role="popup" id="DoneMeats" data-overlay-theme="b" class="ui-content" data-theme="a">
+           <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+                <p id="meatsDoneInfo"></p>
+           </div><!-- /popup -->
+
+
+
+    <h2>Dairy</h2>
+    <div class="col1">
+        <p id="dairy" data-ajax="false"></p>
+
+          <!-- learn more -->
+            <p><a href="#learnMore2" data-rel="popup" data-position-to="window" data-overlay-theme>learn more >></a></p>
+
+            <div data-role="popup" id="learnMore2" data-overlay-theme="b" class="ui-content" data-theme="a">
+           <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+                <p id="dairyInfo"></p>
+        </div><!-- /popup -->
+
+       </div><!-- /col1 -->
+
+    <div class="col2">
+      <a onclick="Dairy();"><img src="images/reload.png" /></a>
+    </div>
+           <br class="clear">
+
+      <!-- completed-->
+
+        <a href="#DoneDairy" class="ui-btn ui-shadow" data-rel="popup" data-position-to="window">Completed</a>
+        
+        <div data-role="popup" id="DoneDairy"  data-overlay-theme="b" class="ui-content" data-theme="a">
+         <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+        <p id="dairyDoneInfo"></p>
+        </div>
+
+    <h2>Produce</h2>
+    <div class="col1">
+    <p id="produce" data-ajax="false"></p>
+       <!-- learn more -->
+            <p><a href="#learnMore3" data-rel="popup" data-position-to="window" data-overlay-theme>learn more >></a></p>
+
+            <div data-role="popup" id="learnMore3" data-overlay-theme="b" class="ui-content" data-theme="a">
+           <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+                <p id="produceInfo"></p>
+        </div><!-- /popup -->
+
+       </div><!-- /col1 -->    
+
+    <div class="col2">
+            <a onclick="Produce();"><img src="images/reload.png" /></a>
+    </div>
+           <br class="clear">
+      
+       <!-- completed-->
+
+        <a href="#DoneProduce" class="ui-btn ui-shadow" data-rel="popup" data-position-to="window">Completed</a>
+       
+        <div data-role="popup" id="DoneProduce"  data-overlay-theme="b" class="ui-content" data-theme="a">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+                <p id="produceDoneInfo"></p>
+        </div>
+
+    </div>
+</div>
+<!-- learn more pop ups -->
+<!-- <div data-role="dialog" id="learnMore1">
+	<div data-role="header">
+		<h1>Info Box</h1>
+	</div>
+    <div data-role="content">
+        <p id="meatsInfo"></p>
+        <center><a href="#" data-role="button" data-rel="back" class="ui-btn ui-btn-inline" >close</a></center>
+    </div>
+
+</div> -->
+
+<!-- <div data-role="dialog" id="learnMore2">
+    <div data-role="header">
+        <h1>Info Box</h1>
+    </div>
+    <div data-role="content">
+        <p id="dairyInfo"></p>
+        <center><a href="#" data-role="button" data-rel="back" class="ui-btn ui-btn-inline" >close</a></center>
+    </div>
+
+</div> -->
+
+<div data-role="dialog" id="learnMore3">
+    <div data-role="header">
+        <h1>Info Box</h1>
+    </div>
+    <div data-role="content">
+        <p id="produceInfo"></p>
+        <center><a href="#" data-role="button" data-rel="back" class="ui-btn ui-btn-inline" >close</a></center>
+    </div>
+
+</div>
+
+<!-- Done button pop ups -->
+
+</body>
+</html>
+
+

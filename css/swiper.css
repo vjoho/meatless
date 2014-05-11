@@ -1,0 +1,389 @@
+/*
+ * Swiper - Mobile Touch Slider CSS
+ * http://www.idangero.us/sliders/swiper
+ *
+ * Vladimir Kharlampidi, The iDangero.us
+ * http://www.idangero.us/
+ * 
+ * Copyright 2012-2013, Vladimir Kharlampidi
+ * The iDangero.us
+ * http://www.idangero.us
+ *
+ * Licensed under GPL & MIT
+ *
+*/
+
+/* ===============================================================
+Basic Swiper Styles 
+================================================================*/
+.swiper-container {
+	margin:0 auto;
+	position:relative;
+	overflow:hidden;
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	-ms-backface-visibility:hidden;
+	-o-backface-visibility:hidden;
+	backface-visibility:hidden;
+	/* Fix of Webkit flickering */
+	z-index:1;
+}
+.swiper-wrapper {
+	position:relative;
+	width:100%;
+	-webkit-transition-property:-webkit-transform, left, top;
+	-webkit-transition-duration:0s;
+	-webkit-transform:translate3d(0px,0,0);
+	-webkit-transition-timing-function:ease;
+	
+	-moz-transition-property:-moz-transform, left, top;
+	-moz-transition-duration:0s;
+	-moz-transform:translate3d(0px,0,0);
+	-moz-transition-timing-function:ease;
+	
+	-o-transition-property:-o-transform, left, top;
+	-o-transition-duration:0s;
+	-o-transform:translate3d(0px,0,0);
+	-o-transition-timing-function:ease;
+	-o-transform:translate(0px,0px);
+	
+	-ms-transition-property:-ms-transform, left, top;
+	-ms-transition-duration:0s;
+	-ms-transform:translate3d(0px,0,0);
+	-ms-transition-timing-function:ease;
+	
+	transition-property:transform, left, top;
+	transition-duration:0s;
+	transform:translate3d(0px,0,0);
+	transition-timing-function:ease;
+}
+.swiper-free-mode > .swiper-wrapper {
+	-webkit-transition-timing-function: ease-out;
+	-moz-transition-timing-function: ease-out;
+	-ms-transition-timing-function: ease-out;
+	-o-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+	margin: 0 auto;
+}
+.swiper-slide {
+	float: left;
+
+}
+
+.cloud{
+	background-image: url(../images/cloud.png);
+	background-repeat: no-repeat;
+	padding-top: 58px;
+	margin: 1% 0 0 -1%;
+    width: 95px;
+    height: 0;
+    position: absolute;
+    z-index: -10;
+}
+
+.cloud2{
+	background-image: url(../images/cloud.png);
+	background-repeat: no-repeat;
+	padding-top: 58px;
+	margin: 0 0 0 17%;
+    width: 95px;
+    height: 0;
+    position: absolute;
+    z-index: -10;
+}
+
+.cloud3{
+	background-image: url(../images/cloud.png);
+	background-repeat: no-repeat;
+	padding-top: 58px;
+	margin: 0 0 0 5%;
+    width: 95px;
+    height: 0;
+    position: absolute;
+    z-index: -10;
+}
+
+/*________________________*/
+
+.cloud4{
+	background-image: url(../images/cloud.png);
+	background-repeat: no-repeat;
+	padding-top: 58px;
+	margin: 6% 0 0 17%;
+    width: 95px;
+    height: 0;
+    position: absolute;
+    z-index: -10;
+}
+
+.cloud5{
+	background-image: url(../images/cloud.png);
+	background-repeat: no-repeat;
+	padding-top: 58px;
+	margin: 25% 0 0 2%;
+    width: 95px;
+    height: 0;
+    position: absolute;
+    z-index: -10;
+}
+
+.cloud6{
+	background-image: url(../images/cloud.png);
+	background-repeat: no-repeat;
+	padding-top: 58px;
+	margin: 0 0 0 5%;
+    width: 95px;
+    height: 0;
+    position: absolute;
+    z-index: -10;
+}
+
+/*________________________*/
+
+
+.cloud7{
+	background-image: url(../images/cloud.png);
+	background-repeat: no-repeat;
+	padding-top: 58px;
+	margin: 14% 0 0 0;
+    width: 95px;
+    height: 0;
+    position: absolute;
+    z-index: -10;
+}
+
+.cloud8{
+	background-image: url(../images/cloud.png);
+	background-repeat: no-repeat;
+	padding-top: 58px;
+	margin: 23% 0 0 17%;
+    width: 95px;
+    height: 0;
+    position: absolute;
+    z-index: -10;
+}
+
+.cloud9{
+	background-image: url(../images/cloud.png);
+	background-repeat: no-repeat;
+	padding-top: 58px;
+	margin: 2% 0 0 12%;
+    width: 95px;
+    height: 0;
+    position: absolute;
+    z-index: -10;
+}
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal {
+	-ms-touch-action: pan-y;
+}
+.swiper-wp8-vertical {
+	-ms-touch-action: pan-x;
+}
+
+#appTitle{
+	font-size: 35px;
+	text-align: center;	
+	background-color: rgba(102, 153, 102, 0.8);
+	color: #fff;
+	padding: 15px 0;
+	margin-top: 60px;
+}
+
+.RimoIntro img{
+	left: 10.5%;
+	bottom: 60px;
+	position: fixed;
+}
+
+
+.baseHome {
+   width: 26.25%; 
+   height: 20%; 
+   margin-left: -16px;
+   background: #d0c3ad; 
+   border-top: 4px solid #493c2b;
+   position: fixed;
+   bottom: 0px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+   background: #CEEAF8;
+
+}
+
+.swiper-slide .title {
+  font-style: italic;
+  font-size: 42px;
+  margin-top: 80px;
+  margin-bottom: 0;
+  line-height: 45px;
+}
+.pagination {
+  position: absolute;
+  left: 45%;
+  bottom: 10px;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: #32a253;
+  margin-right: 5px;
+  opacity: 0.8;
+/*  border: 1px solid #fff;
+*/  cursor: pointer;
+}
+.swiper-visible-switch {
+  background: #aaa;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+
+.swiper-slide ul  {
+	padding: 0;
+
+}
+
+.swiper-slide ul li {
+	display: inline;
+}
+
+.circles ul{
+
+}
+
+.circles ul li img{
+	width: 25%;
+}
+
+.RimoCompare ul {
+border-bottom: 4px solid #7A6751;
+padding-left: 
+}
+
+.RimoCompare ul li {
+padding: 0px;
+margin: 0;
+display: inline;
+}
+
+.RimoCompare ul li .Rimo1{
+width: 17.2%;
+margin-right: 3px;
+margin-bottom: -5.5px;
+}
+
+.RimoCompare ul li .Rimo2{
+width: 15.2%;
+margin-right: 3px;
+margin-bottom: -5.5px;
+}
+
+.RimoCompare ul li .Rimo3{
+width: 13.2%;
+margin-right: 3px;
+margin-bottom: -5.5px;
+}
+
+.RimoCompare ul li .Rimo4{
+width: 11.2%;
+margin-right: 3px;
+margin-bottom: -5.5px;
+}
+
+.RimoCompare ul li .Rimo5{
+width: 9.2%;
+margin-right: 3px;
+margin-bottom: -5.5px;
+}
+
+.RimoCompare ul li .Rimo6{
+width: 7.2%;
+margin-right: 3px;
+margin-bottom: -5.5px;
+}
+
+.rankingActive{
+float: left;
+text-transform: uppercase;
+color: #336633;
+padding-left: 40px;
+}
+
+.rankingInactive{
+float: right;
+text-transform: uppercase;
+color: #CC3333;
+padding-right: 40px;
+}
+
+.clear{
+	clear: both;
+}
+
+.Login-Signup{
+position: fixed;
+bottom: 120px;
+margin-top: 150px;
+width: 25%
+}
+
+.Login-Signup p{
+text-align:center; 
+color:#649564;
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+.signupBtn a, .loginBtn a{
+background-color: #649564;
+padding: 3% 0%;
+border-radius: 1.5em;
+width: 42.2%;
+float: left;
+margin-left: 1.1em;
+color: white;
+text-decoration: none;
+font-size: .9em;
+}
+
+.buttonFB a{
+background-color: #4D71A7;
+padding: 3% 0%;
+border-radius: 1.5em;
+width: 90%;
+float: left;
+margin: 1em 0 0 1.1em;
+color: white;
+text-decoration: none;
+font-size: .9em;
+
+}
+
+#Login{
+	background-color: #85ad85;
+	padding: 20px;
+	border-radius: 15px;
+
+	width: 70%;
+	margin: 20px auto;
+}
+
+h3{
+	margin: 0;
+}
+
+.arrow {
+	margin: 20px 0 0 25px;
+	cursor: pointer;
+}
+
+
